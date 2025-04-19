@@ -1,0 +1,163 @@
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+  }
+  
+  /* Ajustar los botones de navegación para que estén todos en una línea */
+  .nav-buttons {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 6%;
+    max-width: 1400px; /* Aumentado para dar más espacio */
+  }
+  
+  .nav-button {
+    background-color: rgba(26, 75, 153, 0.9);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px; /* Reducido ligeramente el padding horizontal */
+    font-weight: bold;
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(42, 92, 185, 1);
+    transform: translateY(-2px);
+  }
+  
+  .content {
+    text-align: center;
+    z-index: 1;
+    padding: 0 20px;
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  /* Añadir recuadro azul degradado detrás del texto central */
+  .content-background {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250%;
+    max-width: 10000px;
+    height: calc(100% + 60px);
+    background: linear-gradient(to bottom, rgba(26, 75, 153, 0.4), rgba(10, 30, 80, 0.7));
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    padding: 30px;
+  }
+  
+  /* Mejorar el título para mayor visibilidad */
+  .title {
+    font-size: 8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
+    letter-spacing: 8px;
+    line-height: 1.1;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Hacer el botón de inicio más grande y destacado */
+  .start-button {
+    background-color: rgba(26, 75, 153, 0.9);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 18px 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    margin-top: 30px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .start-button:hover {
+    background-color: rgba(42, 92, 185, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos responsivos mejorados */
+  @media (max-width: 1200px) {
+    .nav-buttons {
+      flex-wrap: wrap;
+    }
+  
+    .nav-button {
+      flex: 1 1 calc(50% - 10px);
+      min-width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-buttons {
+      flex-direction: column;
+      gap: 10px;
+      width: 90%;
+    }
+  
+    .nav-button {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 14px;
+    }
+  
+    .title {
+      font-size: 5rem;
+      letter-spacing: 4px;
+    }
+  
+    .subtitle {
+      font-size: 1.4rem;
+    }
+  
+    .start-button {
+      padding: 15px 40px;
+      font-size: 1.2rem;
+    }
+  
+    .content-background {
+      top: -20px;
+      height: calc(100% + 40px);
+    }
+  }
+  

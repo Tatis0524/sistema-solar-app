@@ -1,0 +1,167 @@
+.explorer-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón de regreso */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(26, 75, 153, 0.9);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(42, 92, 185, 1);
+  transform: translateY(-2px);
+}
+
+.arrow {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Título */
+.title-container {
+  position: absolute;
+  top: 20px;
+  left: 170px;
+  text-align: left;
+}
+
+.explorer-title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 0.9;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+}
+
+/* Planetas interactivos */
+.planeta-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.planeta-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.planeta-hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.planeta-button:hover .planeta-hover-effect {
+  opacity: 1;
+}
+
+.planeta-button:hover {
+  transform: scale(1.1);
+}
+
+.planeta-nombre {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+/* Texto informativo */
+.info-text {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.audio-icon {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+/* Botón de prueba de conocimientos */
+.quiz-button {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: rgba(26, 75, 153, 0.9);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-button:hover {
+  background-color: rgba(42, 92, 185, 1);
+  transform: translateY(-2px);
+}
+
+.quiz-button .arrow {
+  margin-left: 8px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .explorer-title {
+    font-size: 3rem;
+  }
+
+  .title-container {
+    left: 120px;
+  }
+
+  .info-text,
+  .quiz-button {
+    font-size: 14px;
+  }
+
+  .planeta-nombre {
+    font-size: 14px;
+  }
+}

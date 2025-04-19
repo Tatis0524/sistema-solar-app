@@ -1,0 +1,310 @@
+/* Contenedor principal */
+.quiz-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    background-color: black;
+    background-image: url("assets/fondo_planetas.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  
+  /* Pantalla de inicio */
+  .quiz-start-screen {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quiz-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .quiz-start-button {
+    background-color: rgba(26, 75, 153, 0.9);
+    color: white;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quiz-start-button:hover {
+    background-color: rgba(42, 92, 185, 1);
+    transform: translateY(-3px);
+  }
+  
+  /* Contenedor de preguntas */
+  .quiz-question-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* Botón de salir */
+  .quiz-exit-button {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: rgba(26, 75, 153, 0.9);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+  
+  .quiz-exit-button:hover {
+    background-color: rgba(42, 92, 185, 1);
+    transform: translateY(-2px);
+  }
+  
+  .arrow {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  /* Panel principal */
+  .quiz-panel {
+    position: relative;
+    background-color: rgba(122, 137, 194, 0.95);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  /* Estrellas decorativas */
+  .star-decoration {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    color: #ffd700;
+  }
+  
+  .star-left {
+    top: -1rem;
+    left: -1rem;
+  }
+  
+  .star-right {
+    top: -1rem;
+    right: -1rem;
+  }
+  
+  /* Pregunta */
+  .quiz-question {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Contenedor de imagen */
+  .planet-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .planet-image-circle {
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  .planet-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  /* Opciones */
+  .quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .quiz-option {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    background-color: rgba(26, 75, 153, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .quiz-option:hover:not(.disabled):not(.correct):not(.incorrect) {
+    background-color: rgba(42, 92, 185, 1);
+    transform: translateY(-2px);
+  }
+  
+  .quiz-option.correct {
+    background-color: #22c55e;
+    color: white;
+  }
+  
+  .quiz-option.incorrect {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .quiz-option.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  /* Mensaje de retroalimentación */
+  .feedback-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .correct-feedback {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #14532d;
+  }
+  
+  .incorrect-feedback {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #7f1d1d;
+  }
+  
+  /* Panel de resultados */
+  .quiz-result-panel {
+    background-color: rgba(122, 137, 194, 0.95);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .result-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .result-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .result-score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .result-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .play-again-button {
+    background-color: rgba(26, 75, 153, 0.9);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .play-again-button:hover {
+    background-color: rgba(42, 92, 185, 1);
+    transform: translateY(-2px);
+  }
+  
+  .exit-button {
+    background-color: rgba(220, 38, 38, 0.9);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .exit-button:hover {
+    background-color: rgba(239, 68, 68, 1);
+    transform: translateY(-2px);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 640px) {
+    .quiz-question {
+      font-size: 1.2rem;
+    }
+  
+    .quiz-options {
+      grid-template-columns: 1fr;
+    }
+  
+    .planet-image-circle {
+      width: 6rem;
+      height: 6rem;
+    }
+  
+    .result-title {
+      font-size: 1.8rem;
+    }
+  
+    .result-score {
+      font-size: 2rem;
+    }
+  }
+  
