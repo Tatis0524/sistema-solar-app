@@ -1,6 +1,14 @@
 "use client"
 import tierra from "./assets/tierra.png"
-import fondo from "./assets/fondo_planetas.png"
+import mercurio from "./assets/mercurio.jpg"
+import venus from "./assets/venus.jpg"
+import marte from "./assets/marte.png"
+import jupiter from "./assets/jupiter.jpg"
+import saturno from "./assets/saturno.jpg"
+import neptuno from "./assets/neptuno.jpg"
+import urano from "./assets/urano.jpg"
+import otros from "./assets/otros.jpg"
+import fondo from "./assets/fondo_planetas.png"   
 import { useParams, useNavigate } from "react-router-dom"
 import "./PlanetaDetalle.css"
 
@@ -15,7 +23,7 @@ const datosPlanetas = {
       "🌑 Dato curioso: Un día en Mercurio dura 176 días terrestres.",
       "🔄 Movimiento: Completa una órbita alrededor del Sol cada 88 días terrestres.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: mercurio, // Reemplazar con la imagen correcta
   },
   venus: {
     nombre: "Venus (El Planeta Más Caliente)",
@@ -27,7 +35,7 @@ const datosPlanetas = {
       "🌍 Dato curioso: Gira en dirección opuesta a la mayoría de los planetas.",
       "🔄 Movimiento: Un día en Venus dura más que su año (243 días terrestres).",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: venus, // Reemplazar con la imagen correcta
   },
   tierra: {
     nombre: "La Tierra (Nuestro Hogar Azul)",
@@ -51,7 +59,7 @@ const datosPlanetas = {
       "🌑 Dato curioso: Tiene dos pequeñas lunas llamadas Fobos y Deimos.",
       "🔄 Movimiento: Un día marciano dura 24.6 horas terrestres.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: marte, // Reemplazar con la imagen correcta
   },
   jupiter: {
     nombre: "Júpiter (El Gigante Gaseoso)",
@@ -63,7 +71,7 @@ const datosPlanetas = {
       "🌌 Dato curioso: Tiene al menos 79 lunas, incluyendo las cuatro grandes lunas galileanas.",
       "🔄 Movimiento: Completa una rotación en solo 9.93 horas a pesar de su tamaño.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: jupiter, // Reemplazar con la imagen correcta
   },
   saturn: {
     nombre: "Saturno (El Señor de los Anillos)",
@@ -75,7 +83,7 @@ const datosPlanetas = {
       "💫 Dato curioso: Sus anillos se extienden hasta 282,000 km desde el planeta, pero solo tienen unos 10 metros de grosor.",
       "🌌 Tiene más de 80 lunas, siendo Titán la más grande y con atmósfera densa.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: saturno, // Reemplazar con la imagen correcta
   },
   uranus: {
     nombre: "Urano (El Planeta Inclinado)",
@@ -87,7 +95,7 @@ const datosPlanetas = {
       '🌌 Dato curioso: Gira "acostado" con una inclinación de 98 grados.',
       "💫 Tiene 27 lunas conocidas, todas nombradas por personajes de obras de Shakespeare y Pope.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: urano, // Reemplazar con la imagen correcta
   },
   neptune: {
     nombre: "Neptuno (El Gigante Azul)",
@@ -99,7 +107,7 @@ const datosPlanetas = {
       "🌪️ Dato curioso: Tiene los vientos más rápidos del Sistema Solar, alcanzando 2,100 km/h.",
       "🌌 Fue descubierto mediante cálculos matemáticos antes de ser observado.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: neptuno, // Reemplazar con la imagen correcta
   },
   others: {
     nombre: "Otros Cuerpos del Sistema Solar",
@@ -111,7 +119,7 @@ const datosPlanetas = {
       "❄️ Objetos del Cinturón de Kuiper: Región más allá de Neptuno con miles de pequeños cuerpos helados.",
       "☀️ Nube de Oort: Esfera hipotética de objetos helados que rodea todo el Sistema Solar.",
     ],
-    imagen: tierra, // Reemplazar con la imagen correcta
+    imagen: otros, // Reemplazar con la imagen correcta
   },
 }
 
