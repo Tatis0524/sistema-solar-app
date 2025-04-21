@@ -1,44 +1,88 @@
 "use client"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import marte from "./assets/martep.jpg"
+import jupiter from "./assets/jupiterp.jpg"
+import jupiterp from "./assets/jupiterpunto.jpg"
+import saturno from "./assets/saturnop.jpg"
+import mercurio from "./assets/mercuriop.jpg"
+import tierra from "./assets/tierrap.jpg"
+import todos from "./assets/todos.png"
+import urano from "./assets/uranop.png"
+import neptuno from "./assets/neptunop.png"
 import "./QuizGame.css"
 
-// Preguntas de ejemplo sobre el espacio
+// Preguntas sobre el sistema solar
 const questions = [
   {
     id: 1,
     question: "¿Qué planeta es conocido como el Planeta Rojo?",
     options: ["Marte", "Urano", "Venus", "Tierra"],
     correctAnswer: 0,
-    image: "/marte_sinfondo.png", // Ajustado a tu estructura de archivos
+    image: marte,
   },
   {
     id: 2,
     question: "¿Cuál es el planeta más grande del Sistema Solar?",
     options: ["Tierra", "Júpiter", "Saturno", "Neptuno"],
     correctAnswer: 1,
-    image: "/jupiter_sinfondo.png",
+    image: jupiter,
   },
   {
     id: 3,
     question: "¿Qué planeta tiene anillos muy visibles?",
     options: ["Júpiter", "Urano", "Saturno", "Neptuno"],
     correctAnswer: 2,
-    image: "/saturno_sinfondo.png",
+    image: saturno,
   },
   {
     id: 4,
     question: "¿Cuál es el planeta más cercano al Sol?",
     options: ["Venus", "Mercurio", "Tierra", "Marte"],
     correctAnswer: 1,
-    image: "/mercurio_sinfondo.png",
+    image: mercurio,
   },
   {
     id: 5,
     question: "¿Qué planeta es conocido como el planeta azul?",
     options: ["Neptuno", "Tierra", "Urano", "Venus"],
     correctAnswer: 1,
-    image: "/tierra_sinfondo.png", // Ajustado a tu estructura de archivos
+    image: tierra,
+  },
+  {
+    id: 6,
+    question: "¿Cuántos planetas tiene el Sistema Solar?",
+    options: ["7", "8", "9", "10"],
+    correctAnswer: 1,
+    image: todos,
+  },
+  {
+    id: 7,
+    question: "¿Cuál es el planeta más frío del Sistema Solar?",
+    options: ["Mercurio", "Venus", "Urano", "Marte"],
+    correctAnswer: 2,
+    image: urano,
+  },
+  {
+    id: 8,
+    question: "¿Qué planeta tiene un gran punto rojo que es una tormenta?",
+    options: ["Saturno", "Marte", "Neptuno", "Júpiter"],
+    correctAnswer: 3,
+    image: jupiterp,
+  },
+  {
+    id: 9,
+    question: "¿Qué planeta tiene muchos anillos, pero no se ven fácilmente como los de Saturno?",
+    options: ["Urano", "Mercurio", "Venus", "Marte"],
+    correctAnswer: 0,
+    image: urano,
+  },
+  {
+    id: 10,
+    question: "¿Qué planeta tiene un color azul intenso y vientos muy fuertes?",
+    options: ["Venus", "Neptuno", "Saturno", "Marte"],
+    correctAnswer: 1,
+    image: neptuno,
   },
 ]
 
@@ -91,7 +135,7 @@ function QuizGame() {
       </button>
       {!gameStarted ? (
         <div className="quiz-start-screen">
-          <h1 className="quiz-title">Juego de Preguntas Espaciales</h1>
+          <h1 className="quiz-title">Juego de Preguntas Del Sistema Solar</h1>
           <button className="quiz-start-button" onClick={() => setGameStarted(true)}>
             ¡COMENZAR!
           </button>

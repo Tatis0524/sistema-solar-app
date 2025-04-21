@@ -11,7 +11,7 @@
   /* Ajustar los botones de navegación para que estén todos en una línea */
   .nav-buttons {
     position: absolute;
-    top: 90px;
+    top: 50px;
     display: flex;
     gap: 40px;
     justify-content: center;

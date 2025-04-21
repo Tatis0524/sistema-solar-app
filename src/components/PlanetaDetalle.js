@@ -23,19 +23,20 @@ const datosPlanetas = {
       "🌑 Dato curioso: Un día en Mercurio dura 176 días terrestres.",
       "🔄 Movimiento: Completa una órbita alrededor del Sol cada 88 días terrestres.",
     ],
-    imagen: mercurio, // Reemplazar con la imagen correcta
+    imagen: mercurio,
   },
   venus: {
     nombre: "Venus (El Planeta Más Caliente)",
     descripcion: `Venus es el segundo planeta desde el Sol y el más caliente del Sistema Solar. Está cubierto por una densa atmósfera tóxica principalmente compuesta de dióxido de carbono.`,
     datos: [
       "🚀 Tamaño: Radio de 6,051 km.",
+      "🌎 Este tamaño es similar al de la Tierra, lo que lo hace su 'planeta gemelo' en tamaño.",
       "🔭 Distancia del Sol: 108.2 millones de km.",
       "🌞 Temperatura: Promedio de 462°C (suficiente para derretir plomo).",
       "🌍 Dato curioso: Gira en dirección opuesta a la mayoría de los planetas.",
       "🔄 Movimiento: Un día en Venus dura más que su año (243 días terrestres).",
     ],
-    imagen: venus, // Reemplazar con la imagen correcta
+    imagen: venus,
   },
   tierra: {
     nombre: "La Tierra (Nuestro Hogar Azul)",
@@ -59,7 +60,7 @@ const datosPlanetas = {
       "🌑 Dato curioso: Tiene dos pequeñas lunas llamadas Fobos y Deimos.",
       "🔄 Movimiento: Un día marciano dura 24.6 horas terrestres.",
     ],
-    imagen: marte, // Reemplazar con la imagen correcta
+    imagen: marte,
   },
   jupiter: {
     nombre: "Júpiter (El Gigante Gaseoso)",
@@ -69,9 +70,9 @@ const datosPlanetas = {
       "🔭 Distancia del Sol: 778.5 millones de km.",
       "🌞 Temperatura: Aproximadamente -145°C en la capa de nubes.",
       "🌌 Dato curioso: Tiene al menos 79 lunas, incluyendo las cuatro grandes lunas galileanas.",
-      "🔄 Movimiento: Completa una rotación en solo 9.93 horas a pesar de su tamaño.",
+      "🔄 Movimiento: Completa una rotación en solo 9.93 horas a pesar de su tamaño. Tiene el día más corto de todos los planetas",
     ],
-    imagen: jupiter, // Reemplazar con la imagen correcta
+    imagen: jupiter,
   },
   saturn: {
     nombre: "Saturno (El Señor de los Anillos)",
@@ -83,7 +84,7 @@ const datosPlanetas = {
       "💫 Dato curioso: Sus anillos se extienden hasta 282,000 km desde el planeta, pero solo tienen unos 10 metros de grosor.",
       "🌌 Tiene más de 80 lunas, siendo Titán la más grande y con atmósfera densa.",
     ],
-    imagen: saturno, // Reemplazar con la imagen correcta
+    imagen: saturno,
   },
   uranus: {
     nombre: "Urano (El Planeta Inclinado)",
@@ -91,11 +92,11 @@ const datosPlanetas = {
     datos: [
       "🚀 Tamaño: Radio de 25,362 km.",
       "🔭 Distancia del Sol: 2,871 millones de km.",
-      "🌞 Temperatura: Aproximadamente -224°C.",
+      "❄️ Temperatura: Aproximadamente -224°C. Es el planeta más frío del Sistema Solar",
       '🌌 Dato curioso: Gira "acostado" con una inclinación de 98 grados.',
       "💫 Tiene 27 lunas conocidas, todas nombradas por personajes de obras de Shakespeare y Pope.",
     ],
-    imagen: urano, // Reemplazar con la imagen correcta
+    imagen: urano,
   },
   neptune: {
     nombre: "Neptuno (El Gigante Azul)",
@@ -106,8 +107,9 @@ const datosPlanetas = {
       "🌞 Temperatura: Aproximadamente -214°C.",
       "🌪️ Dato curioso: Tiene los vientos más rápidos del Sistema Solar, alcanzando 2,100 km/h.",
       "🌌 Fue descubierto mediante cálculos matemáticos antes de ser observado.",
+      "🌬️ Sus vientos alcanzan hasta 2,100 km/h, siendo los más rápidos del Sistema Solar.",
     ],
-    imagen: neptuno, // Reemplazar con la imagen correcta
+    imagen: neptuno,
   },
   others: {
     nombre: "Otros Cuerpos del Sistema Solar",
@@ -119,7 +121,7 @@ const datosPlanetas = {
       "❄️ Objetos del Cinturón de Kuiper: Región más allá de Neptuno con miles de pequeños cuerpos helados.",
       "☀️ Nube de Oort: Esfera hipotética de objetos helados que rodea todo el Sistema Solar.",
     ],
-    imagen: otros, // Reemplazar con la imagen correcta
+    imagen: otros,
   },
 }
 
