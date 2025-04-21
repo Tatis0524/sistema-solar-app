@@ -1,8 +1,12 @@
 "use client"
 import fondo from "./assets/fondo_inicio.jpeg"
 import { useNavigate } from "react-router-dom"
-import "./Home.css" // Importamos el archivo CSS
+import "./Home.css"
 
+/*
+  Componente principal del menú de inicio de la aplicación educativa.
+  Muestra el título y los accesos a las diferentes secciones: exploración, juego y detalles.
+*/
 const Home = () => {
   const navigate = useNavigate()
 
@@ -32,13 +36,13 @@ const Home = () => {
       </div>
 
       <div className="content">
-        {/* Nuevo div para el fondo degradado */}
+        {/* fondo degradado */}
         <div className="content-background"></div>
 
         <h1 className="title">
-          SISTEMA
+          EXPLORA EL
           <br />
-          SOLAR
+          SISTEMA SOLAR
         </h1>
         <p className="subtitle">Explora las maravillas de nuestro Sistema Solar y sus cuerpos celestes</p>
 

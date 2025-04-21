@@ -1,6 +1,7 @@
 "use client"
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react" // Hook para manejar el estado de componentes funcionales
+import { useNavigate } from "react-router-dom" // Hook para navegar entre rutas
+// Imágenes representativas de los planetas
 import marte from "./assets/martep.jpg"
 import jupiter from "./assets/jupiterp.jpg"
 import jupiterp from "./assets/jupiterpunto.jpg"
@@ -10,9 +11,9 @@ import tierra from "./assets/tierrap.jpg"
 import todos from "./assets/todos.png"
 import urano from "./assets/uranop.png"
 import neptuno from "./assets/neptunop.png"
-import "./QuizGame.css"
+import "./QuizGame.css" // Estilos específicos del juego
 
-// Preguntas sobre el sistema solar
+// Lista de preguntas con opciones y respuestas correctas, cada una incluye una imagen representativa
 const questions = [
   {
     id: 1,
@@ -86,26 +87,29 @@ const questions = [
   },
 ]
 
+// Componente principal del juego de preguntas
 function QuizGame() {
   const navigate = useNavigate()
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [score, setScore] = useState(0)
-  const [showResult, setShowResult] = useState(false)
-  const [gameStarted, setGameStarted] = useState(false)
-  const [selectedOption, setSelectedOption] = useState(null)
-  const [isCorrect, setIsCorrect] = useState(null)
+  const [currentQuestion, setCurrentQuestion] = useState(0) // Índice de la pregunta actual
+  const [score, setScore] = useState(0) // Puntuación acumulada
+  const [showResult, setShowResult] = useState(false) // Estado para mostrar el panel de resultados
+  const [gameStarted, setGameStarted] = useState(false) // Indica si el juego ha comenzado
+  const [selectedOption, setSelectedOption] = useState(null) // Opción seleccionada por el usuario
+  const [isCorrect, setIsCorrect] = useState(null) // Indica si la respuesta fue correcta
 
+  // Maneja la respuesta del usuario al hacer clic en una opción
   const handleAnswer = (optionIndex) => {
     setSelectedOption(optionIndex)
 
     const correct = optionIndex === questions[currentQuestion].correctAnswer
     setIsCorrect(correct)
 
+    // Si es correcta, incrementa el puntaje
     if (correct) {
       setScore(score + 10)
     }
 
-    // Esperar un momento antes de pasar a la siguiente pregunta
+    // Avanza a la siguiente pregunta después de 1.5 segundos
     setTimeout(() => {
       setSelectedOption(null)
       setIsCorrect(null)
@@ -113,21 +117,24 @@ function QuizGame() {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1)
       } else {
-        setShowResult(true)
+        setShowResult(true) // Muestra resultados si no hay más preguntas
       }
     }, 1500)
   }
 
+  // Reinicia el quiz desde el principio
   const resetQuiz = () => {
     setCurrentQuestion(0)
     setScore(0)
     setShowResult(false)
   }
-
+  
+  // Sale del juego y vuelve al menú principal
   const exitQuiz = () => {
     navigate("/")
   }
 
+  // Interfaz del juego
   return (
     <div className="quiz-container">
       <button className="back-button" onClick={() => navigate("/")}>

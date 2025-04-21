@@ -12,7 +12,12 @@ import fondo from "./assets/fondo_planetas.png"
 import { useParams, useNavigate } from "react-router-dom"
 import "./PlanetaDetalle.css"
 
+/*
+  Componente que muestra información detallada de cada planeta.
+  Incluye una lista de planetas y al seleccionar uno, se muestra su descripción.
+*/
 const datosPlanetas = {
+   // Lista de planetas y sus datos básicos
   mercury: {
     nombre: "Mercurio (El Planeta Más Cercano al Sol)",
     descripcion: `Mercurio es el planeta más pequeño y cercano al Sol del Sistema Solar. Su superficie está llena de cráteres similares a los de la Luna y experimenta temperaturas extremas.`,
@@ -124,7 +129,7 @@ const datosPlanetas = {
     imagen: otros,
   },
 }
-
+ // Estado que controla el planeta seleccionado
 const PlanetaDetalle = () => {
   const { nombre } = useParams()
   const navigate = useNavigate()

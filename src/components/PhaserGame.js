@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import Phaser from 'phaser';
 
+/*
+  Este componente React integra un juego desarrollado con Phaser dentro de la aplicación web.
+  Usa un `ref` para montar el canvas del juego solo una vez cuando el componente se carga.
+*/
+
 const PhaserGame = () => {
   const gameRef = useRef(null);
 
