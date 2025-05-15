@@ -1,0 +1,315 @@
+.simulator-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 200px;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e);
+    color: white;
+    overflow: hidden;
+    transition: background 1s ease;
+}
+
+.simulator-container.day {
+    background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+    color: #333;
+}
+
+.simulator-container.night {
+    background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364);
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+
+.simulator-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.simulation-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #FFD700, #FF8C00);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #FF8C00;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.earth {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: url('./assets/earth-texture.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.1s linear;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.day-night {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.day-night.day {
+    box-shadow: inset -30px 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.day-night.night {
+    box-shadow: inset 30px 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.moon-orbit {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    transform-origin: center;
+    transition: transform 1s ease;
+}
+
+.moon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.night .stars {
+    opacity: 1;
+    background-image: 
+        /* Primera fila de estrellas */
+        radial-gradient(1px 1px at 20px 30px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 60px 20px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 80px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 100px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 120px 30px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 140px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 10px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 180px 40px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 200px 70px, white, rgba(0,0,0,0)),
+        
+        /* Segunda fila de estrellas */
+        radial-gradient(1px 1px at 220px 20px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 240px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 260px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 280px 30px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 300px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 320px 10px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 340px 40px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 360px 70px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 380px 20px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 400px 50px, white, rgba(0,0,0,0)),
+        
+        /* Tercera fila de estrellas */
+        radial-gradient(1px 1px at 420px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 440px 30px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 460px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 480px 10px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 500px 40px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 520px 70px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 540px 20px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 560px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 580px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 600px 30px, white, rgba(0,0,0,0));
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.control-button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.moon-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.moon-phase {
+    min-width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.info-panels {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+}
+
+.info-panel {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-info {
+    margin-top: 15px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.sun-info-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 165, 0, 0.7);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.moon-phases-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.moon-phases-list li {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.moon-phases-list li.active {
+    background: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .simulator-title {
+        font-size: 1.8rem;
+    }
+    
+    .simulation-area {
+        height: 300px;
+    }
+    
+    .sun {
+        width: 70px;
+        height: 70px;
+        left: 10%;
+    }
+    
+    .earth {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .moon-orbit {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .moon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .moon-controls {
+        flex-direction: column;
+    }
+}
