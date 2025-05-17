@@ -2,6 +2,11 @@ import React, { useEffect, useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import "./PuzzleGame.css"
 
+/*
+  Rompezabezas del sistema solar, permite arrastrar planetas en orden segun como se ubican en las orbitas.
+  Tiene un numero de errores especifico y muestra mensaje de exito o fracaso, al igualque audio de correcto e incorrecto.
+*/
+
 const planetNames = [
   "mercurio", "venus", "tierra", "marte", "jupiter",
   "saturno", "urano", "neptuno"
@@ -177,7 +182,7 @@ const PuzzleGame = () => {
   return (
     <div className="container">
       <button className="back-button" onClick={() => navigate("/")}>← REGRESAR</button>
-      <h1>Arrastra y ubica correctamente los planetas en sus posiciones</h1>
+      <h1>Arrastra y ubica correctamente los planetas en sus posiciones, tienes 3 oportunidades de equivocarte</h1>
 
       <div className="counters">
         <div className="planets-counter">Planetas: {planetsPlaced}/{planetNames.length}</div>

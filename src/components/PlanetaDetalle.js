@@ -166,13 +166,6 @@ const PlanetaDetalle = () => {
               </li>
             ))}
           </ul>
-
-          <div className="planeta-audio">
-            <span className="audio-icon">🔊</span>
-            <div className="audio-control">
-              <div className="audio-progress"></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

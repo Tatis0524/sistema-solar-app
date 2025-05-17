@@ -13,6 +13,11 @@ import urano from "./assets/uranop.png"
 import neptuno from "./assets/neptunop.png"
 import "./QuizGame.css" // Estilos específicos del juego
 
+/*
+  Juego de preguntas y respuestas sobre el sistema solar.
+  Muestra retroalimentación y una cantidad de puntos al final.
+*/
+
 // Lista de preguntas con opciones y respuestas correctas, cada una incluye una imagen representativa
 const questions = [
   {

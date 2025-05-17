@@ -8,10 +8,12 @@ import QuizSection from './components/QuizGame';
 import PuzzleSection from './components/PuzzleGame';
 import DayNightSimulation from './components/DayNightSimulator';
 import PlanetaDetalle from './components/PlanetaDetalle';
+import AudioPlayer from "./components/AudioPlayer" // 👈 Importa el componente de audio
 
 function App() {
   return (
     <Router>
+      <AudioPlayer /> {/* 👈 Este se mantiene montado SIEMPRE */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exploracion" element={<SolarSystemExplorer />} />

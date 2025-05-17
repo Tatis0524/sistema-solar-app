@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import './DayNightSimulator.css';
 
+/*
+  Componente que muestra una simulación del como la tierra va pasando por el día y la noche.
+  Incluye como van pasando las fases de la luna a lo largo del día y una descripción del sol, la tierra y la luna.
+*/
+
 const DayNightSimulator = () => {
     const navigate = useNavigate();
     const [timeOfDay, setTimeOfDay] = useState('day');
@@ -87,6 +92,7 @@ const DayNightSimulator = () => {
             <div className="title-container">
                 <h1 className="simulator-title">SIMULACIÓN DEL DÍA Y LA NOCHE</h1>
                 <p className="subtitle">Aprende cómo funciona nuestro planeta</p>
+                <p className="subtitle">Para saber más presiona la luna y la tierra</p>
             </div>
 
             <div className="simulation-area">

@@ -3,6 +3,11 @@ import fondo from "./assets/exploracion.png"
 import { useNavigate } from "react-router-dom"
 import "./SolarSystemExplorer.css"
 
+/*
+  Componente que permite explorar los diferentes planetas del sistema solar.
+  Al dar clic en un planeta redirige a los detalles sobre este.
+*/
+
 const planetas = [
   {
     nombre: "Mercury",
@@ -112,8 +117,7 @@ const SolarSystemExplorer = () => {
 
       {/* Texto informativo */}
       <div className="info-text">
-        <span className="audio-icon">🔊</span>
-        Aquí puedes explorar los planetas y aprender sobre ellos
+        <p><b>Aquí puedes explorar los planetas y aprender sobre ellos:</b> Haz clic sobre alguno cuando quieras</p>
       </div>
 
       {/* Botón de prueba de conocimientos */}
