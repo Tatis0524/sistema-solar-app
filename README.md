@@ -1,3 +1,21 @@
+# 🌌 Explora el Sistema Solar
+
+**Explora el Sistema Solar** es una aplicación web interactiva diseñada para estudiantes de grado tercero de primaria. A través de juegos, exploración visual y simulaciones, los niños pueden aprender sobre los planetas del sistema solar y conceptos como el día y la noche de forma dinámica y divertida.
+
+## 🎯 Objetivos
+
+- Fomentar el interés por el espacio y la astronomía.
+- Comprender las características y orden de los planetas.
+- Identificar cómo se produce el día y la noche.
+- Promover el aprendizaje significativo mediante la interacción.
+
+## 🧠 Características
+
+- 🌍 **Exploración interactiva**: Visualiza y descubre información sobre cada planeta.
+- ❓ **Juego de preguntas y respuestas**: Quiz con retroalimentación visual.
+- 🧩 **Rompecabezas**: Arrastra los planetas a su posición correcta.
+- 🌞 **Simulación día y noche** *(opcional)*: Observa la rotación terrestre y cómo afecta la luz solar.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
